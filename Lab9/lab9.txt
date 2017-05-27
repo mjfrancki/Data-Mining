@@ -1,0 +1,35 @@
+CPS844 Data Mining 
+Lab 9
+Michael Francki
+
+
+————————————————————————————1——————————————————————————
+loaded.
+————————————————————————————2——————————————————————————
+J48
+Correctly Classified Instances         143               66.8224 %
+
+
+IB1
+Correctly Classified Instances         151               70.5607 %
+————————————————————————————3——————————————————————————
+Percentage(%)    IB1		J48
+100	         66.8224 %	68.2243 %
+90               67.2897 %	69.1589 %
+80               67.757  %	70.0935 %
+70		 65.8879 %	67.757  %	
+60		 64.486  %	69.1589 %
+50		 62.6168 %	63.0841 %
+40		 63.5514 %	64.9533 %
+30		 60.2804 %	59.3458 %
+20		 63.5514 %	53.271  %
+10		 52.8037 %	45.3271 %
+
+————————————————————————————4——————————————————————————
+More training data in general gives better results. This makes sense because more 
+training data should lead to better fitting to the model     
+
+————————————————————————————5——————————————————————————
+J48 seem to be effected more to decrease in amount of data.  
+
+————————————————————————————6——————————————————————————

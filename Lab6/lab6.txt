@@ -1,0 +1,211 @@
+LAB 6
+Data Mining CPS844
+
+Michael Francki 
+
+
+***********************1**********************
+
+
+Best			                 Worst
+MMAX ——  MMIN —— CACH —- CHMIN —- CHMAX -MYCT
+
+
+
+
+
+***********************2**********************
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SimpleLinearRegression 
+Relation:     cpu
+Instances:    209
+Attributes:   7
+              MYCT
+              MMIN
+              MMAX
+              CACH
+              CHMIN
+              CHMAX
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Linear regression on MMAX
+
+0.01 * MMAX - 34
+
+Predicting 0 if attribute value is missing.
+
+
+Time taken to build model: 0 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient                  0.7844
+Mean absolute error                     53.8054
+Root mean squared error                 99.5674
+Relative absolute error                 55.908  %
+Root relative squared error             61.8997 %
+Total Number of Instances              209     
+
+
+SYNOPSIS
+Learns a simple linear regression model. Picks the attribute that results in the lowest squared error. Can only deal with numeric attributes.
+
+
+*It just uses the attribute with lowest squared error
+
+Using MMAX gives lowest error
+
+***********************3**********************
+
+Linear regression on MMIN
+=== Summary ===
+
+Correlation coefficient                  0.7872
+Mean absolute error                     47.9445
+Root mean squared error                 98.9755
+Relative absolute error                 49.8181 %
+Root relative squared error             61.5318 %
+Total Number of Instances              209     
+
+
+
+
+Linear regression on CACH
+=== Summary ===
+
+Correlation coefficient                  0.5247
+Mean absolute error                     69.4436
+Root mean squared error                144.3479
+Relative absolute error                 72.1574 %
+Root relative squared error             89.7392 %
+Total Number of Instances              209     
+
+
+
+Linear regression on CHMIN
+=== Summary ===
+
+Correlation coefficient                  0.3637
+Mean absolute error                     83.8649
+Root mean squared error                159.6198
+Relative absolute error                 87.1422 %
+Root relative squared error             99.2335 %
+Total Number of Instances              209     
+
+
+
+Linear regression on CHMAX
+=== Summary ===
+
+Correlation coefficient                  0.5544
+Mean absolute error                     75.5643
+Root mean squared error                133.7499
+Relative absolute error                 78.5173 %
+Root relative squared error             83.1506 %
+Total Number of Instances              209     
+
+
+Linear regression on MYCT
+=== Summary ===
+
+Correlation coefficient                  0.2937
+Mean absolute error                     91.1796
+Root mean squared error                153.3972
+Relative absolute error                 94.7428 %
+Root relative squared error             95.365  %
+Total Number of Instances              209     
+
+
+
+TRUE Order
+
+BEST                                  Worst 
+MMAX — MMIN — CACH —  CHMIN —- CHMAX — MYCT
+
+
+Estimated Order
+Best			                 Worst
+MMAX ——  MMIN —— CACH —- CHMIN —- CHMAX -MYCT
+
+
+I estimated correctly In part one just by visually seeing what data looked must linearer.
+
+
+
+***********************4**********************
+
+SimpleLinearRegression 
+CAPABILITIES
+Class -- Date class, Numeric class, Missing class values
+
+Attributes -- Numeric attributes, Missing values, Date attributes
+
+Additional
+min # of instances: 1
+
+The class of the iris data set is Nominal 
+
+SimpleLogistic 
+Correctly Classified Instances         141               94      %
+
+
+***********************5**********************
+
+VotedPerceptron
+CAPABILITIES
+Class -- Missing class values, Binary class
+
+Attributes -- Numeric attributes, Missing values, Date attributes, Empty nominal attributes, Nominal attributes, Unary attributes, Binary attributes
+
+Additional
+min # of instances: 0
+
+Iris data set does not have a binary class
+
+
+
+MultilayerPerceptron
+Correctly Classified Instances         146               97.3333 %
+***********************6**********************
+
+  Without Versicolor
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0  0  0 |  b = Iris-versicolor
+  0  0 50 |  c = Iris-virginica
+
+  Without Virginica
+
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 50  0 |  b = Iris-versicolor
+  0  0  0 |  c = Iris-virginica
+
+
+  Without setosa
+
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+  0  0  0 |  a = Iris-setosa
+  0 46  4 |  b = Iris-versicolor
+  0  3 47 |  c = Iris-virginica
+
+Setosa is probably linearly separable from the other two
+you can also separate with logistic regression 
+
+
+
+

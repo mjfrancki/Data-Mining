@@ -1,0 +1,91 @@
+CPS844 Data Mining 
+Lab 7 clustering 
+
+Michael Francki 500554567
+
+
+————————————————————-1———————————————————-
+These 3 instances seem to be wrongly classified 
+Instance: 71
+Instance_number : 70.0
+    sepallength : 5.9
+     sepalwidth : 3.2
+    petallength : 4.8
+     petalwidth : 1.8
+          class : Iris-versicolor
+        Cluster : cluster3
+
+Instance: 78
+Instance_number : 77.0
+    sepallength : 6.7
+     sepalwidth : 3.0
+    petallength : 5.0
+     petalwidth : 1.7
+          class : Iris-versicolor
+        Cluster : cluster3
+
+Instance: 84
+Instance_number : 83.0
+    sepallength : 6.0
+     sepalwidth : 2.7
+    petallength : 5.1
+     petalwidth : 1.6
+          class : Iris-versicolor
+        Cluster : cluster3
+
+
+
+————————————————————-2———————————————————-
+It is worse
+setosa is good 
+they all fall into cluster 0 and Cluster 3
+
+But Versicolor and Virginia both have a  large cluster of Cluster 2 and Cluster 1 each
+
+appears  versicolor has about ~20  misclassified into cluster !
+and virginica has about ~15 misclassified into cluster 2
+
+
+
+
+————————————————————-3———————————————————-
+Incorrectly clustered instances :	60.0	 40      %
+
+Classes to Clusters:
+
+  0  1  2  3  4  <-- assigned to cluster
+ 28  0  0 22  0 | Iris-setosa
+  0  0 27  0 23 | Iris-versicolor
+  0 35 15  0  0 | Iris-virginica
+
+Cluster 0 <-- Iris-setosa
+Cluster 1 <-- Iris-virginica
+Cluster 2 <-- Iris-versicolor
+Cluster 3 <-- No class
+Cluster 4 <-- No class
+
+Incorrect instances 
+22 instances in cluster 3
+23 instances in cluster 4
+15 instances in cluster 2
+
+————————————————————-4———————————————————-
+Incorrectly clustered instances :	50.0	 33.3333 %
+
+————————————————————-5———————————————————-
+Incorrectly clustered instances :	50.0	 33.3333 %
+
+————————————————————-6———————————————————-
+Incorrectly clustered instances :	21.0	 14      %
+
+————————————————————-7———————————————————-
+Incorrectly clustered instances :	17.0	 11.3333 %
+
+————————————————————-8———————————————————-
+
+Incorrectly clustered instances :	15.0	 10      %
+
+————————————————————-9———————————————————-
+Incorrectly clustered instances :	14.0	  9.3333 %
+————————————————————-10———————————————————-
+Knowing before running the algorithm how many clusters it should create greatly increases accuracy . 

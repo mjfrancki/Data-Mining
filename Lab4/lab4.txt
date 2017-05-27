@@ -1,0 +1,178 @@
+Lab 4
+Data Mining 
+
+———————1————————
+
+ZeroR predicts class value: Iris-setosa
+Correctly Classified Instances          50               33.3333 %
+
+———————2————————
+
+ZeroR predicts class value: Iris-virginica
+Correctly Classified Instances          50               96.1538 %
+
+
+———————3————————
+petalwidth:
+	< 0.8	-> Iris-setosa
+	< 1.75	-> Iris-versicolor
+	>= 1.75	-> Iris-virginica
+(144/150 instances correct)
+
+Correctly Classified Instances         138               92      %
+
+
+———————4—————————
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-versicolor
+petallength is missing : Iris-setosa
+
+Correctly Classified Instances         100               66.6667 %
+
+
+————————5—————————
+
+
+Naive Bayes Classifier
+
+                         Class
+Attribute          Iris-setosa Iris-versicolor  Iris-virginica
+                        (0.33)          (0.33)          (0.33)
+===============================================================
+sepallength
+  mean                   4.9913          5.9379          6.5795
+  std. dev.               0.355          0.5042          0.6353
+  weight sum                 50              50              50
+  precision              0.1059          0.1059          0.1059
+
+sepalwidth
+  mean                   3.4015          2.7687          2.9629
+  std. dev.              0.3925          0.3038          0.3088
+  weight sum                 50              50              50
+  precision              0.1091          0.1091          0.1091
+
+petallength
+  mean                   1.4694          4.2452          5.5516
+  std. dev.              0.1782          0.4712          0.5529
+  weight sum                 50              50              50
+  precision              0.1405          0.1405          0.1405
+
+petalwidth
+  mean                   0.2743          1.3097          2.0343
+  std. dev.              0.1096          0.1915          0.2646
+  weight sum                 50              50              50
+  precision              0.1143          0.1143          0.1143
+
+
+Correctly Classified Instances         144               96      %
+
+
+—————————6——————————
+
+J48 pruned tree
+------------------
+
+petalwidth <= 0.6: Iris-setosa (50.0)
+petalwidth > 0.6
+|   petalwidth <= 1.7
+|   |   petallength <= 4.9: Iris-versicolor (48.0/1.0)
+|   |   petallength > 4.9
+|   |   |   petalwidth <= 1.5: Iris-virginica (3.0)
+|   |   |   petalwidth > 1.5: Iris-versicolor (3.0/1.0)
+|   petalwidth > 1.7: Iris-virginica (46.0/1.0)
+
+Correctly Classified Instances         144               96      %
+
+
+——————————7—————————-
+
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-versicolor
+petallength is missing : Iris-setosa
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.0	0.5	0.5	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.3333333333333333	0.3333333333333333	0.3333333333333333	
+
+
+Weight: 0.69
+
+Decision Stump
+
+Classifications
+
+petallength <= 2.45 : Iris-setosa
+petallength > 2.45 : Iris-virginica
+petallength is missing : Iris-virginica
+
+Class distributions
+
+petallength <= 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+1.0	0.0	0.0	
+petallength > 2.45
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.0	0.3333333333333333	0.6666666666666667	
+petallength is missing
+Iris-setosa	Iris-versicolor	Iris-virginica	
+0.25	0.25	0.5000000000000001	
+
+
+Weight: 1.1
+
+
+
+Correctly Classified Instances         143               95.3333 %
+
+——————————8—————————-
+
+daBoostM1: Base classifiers and their weights: 
+
+petalwidth:
+	< 0.8	-> Iris-setosa
+	< 1.65	-> Iris-versicolor
+	>= 1.65	-> Iris-virginica
+(147/150 instances correct)
+
+
+Weight: 3.18
+
+petalwidth:
+	< 0.8	-> Iris-setosa
+	< 1.35	-> Iris-versicolor
+	< 1.65	-> Iris-virginica
+	< 1.85	-> Iris-versicolor
+	>= 1.85	-> Iris-virginica
+(136/150 instances correct)
+
+
+Weight: 2.08
+
+
+Correctly Classified Instances         139               92.6667 %
+
+
+——————————9—————————-
+
+Using very simple learning methods i.e. zeroR can sometimes give poor results they also have a high degree 
+of variance so by having different instances of sets of training data even if the describe the same truth 
+can give very different results. More flexible models like AdaBoostM1 seem to fit the test data better and  have better accuracy by having more complex rules giving it higher flexibility but with out testing on new fresh data it is unclear if it has over fitted the training data or not.  
+

@@ -1,0 +1,135 @@
+
+CPS844 Data Mining
+Lab 5
+Michael Francki 500554567
+
+***************************1******************************
+
+Likelihood of yes = 0.000039
+Likelihood of no = 0.000106
+----------------------------
+Probability of yes = 0.27
+Probability of no = 0.73
+----------------------------
+
+
+****************************2**************************
+
+
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 35 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     weather.symbolic
+Instances:    14
+Attributes:   5
+              outlook
+              temperature
+              humidity
+              windy
+              play
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.15 (2 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 17
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 12
+
+Size of set of large itemsets L(2): 47
+
+Size of set of large itemsets L(3): 39
+
+Size of set of large itemsets L(4): 6
+
+Best rules found:
+
+ 1. outlook=overcast 4 ==> play=yes 4    <conf:(1)> lift:(1.56) lev:(0.1) [1] conv:(1.43)
+ 2. temperature=cool 4 ==> humidity=normal 4    <conf:(1)> lift:(2) lev:(0.14) [2] conv:(2)
+ 3. humidity=normal windy=FALSE 4 ==> play=yes 4    <conf:(1)> lift:(1.56) lev:(0.1) [1] conv:(1.43)
+ 4. outlook=sunny play=no 3 ==> humidity=high 3    <conf:(1)> lift:(2) lev:(0.11) [1] conv:(1.5)
+ 5. outlook=sunny humidity=high 3 ==> play=no 3    <conf:(1)> lift:(2.8) lev:(0.14) [1] conv:(1.93)
+ 6. outlook=rainy play=yes 3 ==> windy=FALSE 3    <conf:(1)> lift:(1.75) lev:(0.09) [1] conv:(1.29)
+ 7. outlook=rainy windy=FALSE 3 ==> play=yes 3    <conf:(1)> lift:(1.56) lev:(0.08) [1] conv:(1.07)
+ 8. temperature=cool play=yes 3 ==> humidity=normal 3    <conf:(1)> lift:(2) lev:(0.11) [1] conv:(1.5)
+ 9. outlook=sunny temperature=hot 2 ==> humidity=high 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+10. temperature=hot play=no 2 ==> outlook=sunny 2    <conf:(1)> lift:(2.8) lev:(0.09) [1] conv:(1.29)
+11. outlook=sunny temperature=hot 2 ==> play=no 2    <conf:(1)> lift:(2.8) lev:(0.09) [1] conv:(1.29)
+12. outlook=sunny play=yes 2 ==> humidity=normal 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+13. outlook=sunny humidity=normal 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+14. windy=FALSE play=no 2 ==> outlook=sunny 2    <conf:(1)> lift:(2.8) lev:(0.09) [1] conv:(1.29)
+15. outlook=overcast windy=FALSE 2 ==> temperature=hot 2    <conf:(1)> lift:(3.5) lev:(0.1) [1] conv:(1.43)
+16. outlook=overcast temperature=hot 2 ==> windy=FALSE 2    <conf:(1)> lift:(1.75) lev:(0.06) [0] conv:(0.86)
+17. temperature=hot play=yes 2 ==> outlook=overcast 2    <conf:(1)> lift:(3.5) lev:(0.1) [1] conv:(1.43)
+18. outlook=overcast temperature=hot 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+19. outlook=overcast humidity=high 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+20. outlook=overcast humidity=normal 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+21. outlook=overcast windy=TRUE 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+22. outlook=overcast windy=FALSE 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+23. outlook=rainy humidity=high 2 ==> temperature=mild 2    <conf:(1)> lift:(2.33) lev:(0.08) [1] conv:(1.14)
+24. outlook=rainy temperature=cool 2 ==> humidity=normal 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+25. outlook=rainy play=no 2 ==> windy=TRUE 2    <conf:(1)> lift:(2.33) lev:(0.08) [1] conv:(1.14)
+26. outlook=rainy windy=TRUE 2 ==> play=no 2    <conf:(1)> lift:(2.8) lev:(0.09) [1] conv:(1.29)
+27. temperature=hot play=no 2 ==> humidity=high 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+28. temperature=hot play=yes 2 ==> windy=FALSE 2    <conf:(1)> lift:(1.75) lev:(0.06) [0] conv:(0.86)
+29. temperature=mild play=no 2 ==> humidity=high 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+30. temperature=mild humidity=normal 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+31. temperature=cool windy=TRUE 2 ==> humidity=normal 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+32. temperature=cool windy=FALSE 2 ==> humidity=normal 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+33. temperature=cool windy=FALSE 2 ==> play=yes 2    <conf:(1)> lift:(1.56) lev:(0.05) [0] conv:(0.71)
+34. windy=FALSE play=no 2 ==> humidity=high 2    <conf:(1)> lift:(2) lev:(0.07) [1] conv:(1)
+35. temperature=hot humidity=high play=no 2 ==> outlook=sunny 2    <conf:(1)> lift:(2.8) lev:(0.09) [1] conv:(1.29)
+
+
+
+
+*********************3**********************
+
+
+
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 35 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     vwx
+Instances:    12
+Attributes:   3
+              V
+              W
+              X
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.1 (1 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 18
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 6
+
+Size of set of large itemsets L(2): 11
+
+Size of set of large itemsets L(3): 5
+
+Best rules found:
+
+ 1. W=d 6 ==> X=e 6    <conf:(1)> lift:(1.5) lev:(0.17) [2] conv:(2)
+ 2. X=f 4 ==> W=c 4    <conf:(1)> lift:(2) lev:(0.17) [2] conv:(2)
+ 3. V=a X=e 4 ==> W=d 4    <conf:(1)> lift:(2) lev:(0.17) [2] conv:(2)
+ 4. V=a W=d 4 ==> X=e 4    <conf:(1)> lift:(1.5) lev:(0.11) [1] conv:(1.33)
+ 5. V=a X=f 2 ==> W=c 2    <conf:(1)> lift:(2) lev:(0.08) [1] conv:(1)
+ 6. V=a W=c 2 ==> X=f 2    <conf:(1)> lift:(3) lev:(0.11) [1] conv:(1.33)
+ 7. V=b X=f 2 ==> W=c 2    <conf:(1)> lift:(2) lev:(0.08) [1] conv:(1)
+ 8. W=c X=e 2 ==> V=b 2    <conf:(1)> lift:(2) lev:(0.08) [1] conv:(1)
+ 9. V=b W=d 2 ==> X=e 2    <conf:(1)> lift:(1.5) lev:(0.06) [0] conv:(0.67)
+
+
+

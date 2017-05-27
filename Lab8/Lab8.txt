@@ -1,0 +1,110 @@
+CPS844
+Data Mining 
+Lab 8 
+Michael Francki
+——some useful comments
+5. Number of Instances: 214
+
+7. Attribute Information:
+%    1. Id number: 1 to 214
+%    2. RI: refractive index
+%    3. Na: Sodium (unit measurement: weight percent in corresponding oxide, as 
+%                   are attributes 4-10)
+%    4. Mg: Magnesium
+%    5. Al: Aluminum
+%    6. Si: Silicon
+%    7. K: Potassium
+%    8. Ca: Calcium
+%    9. Ba: Barium
+%   10. Fe: Iron
+%   11. Type of glass: (class attribute)
+%       -- 1 building_windows_float_processed
+%       -- 2 building_windows_non_float_processed
+%       -- 3 vehicle_windows_float_processed
+%       -- 4 vehicle_windows_non_float_processed (none in this database)
+%       -- 5 containers
+%       -- 6 tableware
+%       -- 7 headlamps
+% 
+
+@relation Glass
+@attribute 'RI' numeric
+@attribute 'Na' numeric
+@attribute 'Mg' numeric
+@attribute 'Al' numeric
+@attribute 'Si' numeric
+@attribute 'K' numeric
+@attribute 'Ca' numeric
+@attribute 'Ba' numeric
+@attribute 'Fe' numeric
+@attribute 'Type' { 'build wind float', 'build wind non-float', 'vehic wind float', 'vehic wind non-float', containers, tableware, headlamps}
+
+
+
+——————————————————————————-2—————————————————————————-
+k=1
+Correctly Classified Instances         151               70.5607 %
+
+
+
+
+——————————————————————————-3—————————————————————————-
+k=5
+Correctly Classified Instances         145               67.757  %
+
+k=4
+Correctly Classified Instances         147               68.6916 %
+
+k=3
+Correctly Classified Instances         154               71.9626 %
+
+k=2
+Correctly Classified Instances         145               67.757  %
+
+
+The best is k=3. 
+
+——————————————————————————-4—————————————————————————-
+subset of the 9 attributes
+2^9 = 512
+
+——————————————————————————-5—————————————————————————-
+Subset Size     | Attributes  (+ type)                     |Classification Accuracy      
+9		| RI, Na, Mg, Al, Si, K, Ca, Ba, Fe        |  70.5607 %
+8		| RI, Na, Mg, Al, Si, K, Ca, Ba,      	   |  77.1028 %		     	
+7		| RI, Na, Mg, Al, K, Ca, Ba,		   |  77.5701 %	 	           
+6		| RI, Na, Mg, K, Ca, Ba                    |  78.972  %	
+5		| RI, Na, Mg, K, Ca			   |  78.0374 %	
+4		| RI, Mg, K, Ca 		           |  77.1028 %
+3		| RI, K, Ca				   |  73.8318 %
+2		| RI, K				           |  64.9533 %	 
+1               | K                                        |  49.0654 %
+0               | - 					   |  35.514  %
+——————————————————————————-6—————————————————————————-
+The best subset to use is {RI, Na, Mg, K, Ca, Ba} 
+
+——————————————————————————-7—————————————————————————-
+It is biased we are using the training data to test, even though we used 
+cross validation  to reduce bias some still exists. We need to test on 
+new data that was not used for training.
+     
+——————————————————————————-8—————————————————————————-
+Percentage Noise(%)  k=1          K=2          K=3
+0                    70.5607 %    67.757  %    71.9626 %
+10		     62.6168 %	  63.0841 %    69.6262 %
+20		     50.4673 %    57.0093 %    63.0841 %
+30		     47.1963 %    52.3364 %    58.4112 %
+40                   41.1215 %    48.5981 %    54.6729 %
+50		     33.1776 %    40.1869 %    44.3925 %
+60		     27.1028 %    33.1776 %    35.514  %
+70                   20.0935 %    26.1682 %    28.5047 %
+80		     14.0187 %    19.1589 %    21.028  %
+90		      7.9439 %    11.6822 %    13.5514 %
+100		      4.6729 %     8.4112 %     7.9439 %
+
+——————————————————————————-9—————————————————————————-
+More noise decrease accuracy of the (training data) prediction.
+
+——————————————————————————-10—————————————————————————-
+k=1 is the worst and k=3 is the best. 
+
